@@ -5,6 +5,12 @@ My own implementation Transformer model (Attention is All You Need - Google Brai
 ![model](image/model.png)
 <br><br>
 
+
+### And adding the pruning
+- Pruning rate: 40, 50, 60, 70, 80, 90%
+- Theme: All layers, Only Attention layers, Only FFN layers
+
+
 ## 1. Implementations
 
 ### 1.1 Positional Encoding
@@ -397,15 +403,24 @@ I follow original paper's parameter settings. (below) <br>
 
 <br><br>
 
+## 3. Pruning result 
 
-## 3. Reference
+**Evaluate BLEU after global pruning (no fine-tuning)**
+![image](https://user-images.githubusercontent.com/51250746/163510760-97b97310-59cf-47c2-98a5-bcb145c966a0.png)
+* Pre-trained model의 Max. BLEU: 25.032
+
+**Zero weight percentage with global pruning**
+![image](https://user-images.githubusercontent.com/51250746/163510811-6b4225a0-fbb4-493b-8355-df09a6c3cb1b.png)
+
+
+## 4. Reference
 - [Attention is All You Need, 2017 - Google](https://arxiv.org/abs/1706.03762)
 - [The Illustrated Transformer - Jay Alammar](http://jalammar.github.io/illustrated-transformer/)
 - [Data & Optimization Code Reference - Bentrevett](https://github.com/bentrevett/pytorch-seq2seq/)
 
 <br><br>
 
-## 4. Licence
+## 5. Licence
     Copyright 2019 Hyunwoong Ko.
     
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -419,3 +434,5 @@ I follow original paper's parameter settings. (below) <br>
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
+    
