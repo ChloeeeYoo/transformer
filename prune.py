@@ -32,10 +32,10 @@ def count_parameters(model):
 
 
 
-train_losses, train_count = load_record('./result/train_loss.txt')
+#train_losses, train_count = load_record('./result/train_loss.txt')
 test_losses, _ = load_record('./result/test_loss.txt')
 bleus, _ = load_record('./result/bleu.txt')
-epoch -= train_count
+#epoch -= train_count
 
 model = Transformer(src_pad_idx=src_pad_idx,
                     trg_pad_idx=trg_pad_idx,
@@ -265,14 +265,14 @@ def run(total_epoch, best_loss):
 
     for step in range(total_epoch):
         start_time = time.time()
-        train_loss = train(model, train_iter, optimizer, criterion, clip)
+        #train_loss = train(model, train_iter, optimizer, criterion, clip)
         valid_loss, bleu = evaluate(model, valid_iter, criterion)
         end_time = time.time()
 
         if step > warmup:
             scheduler.step(valid_loss)
 
-        train_losses.append(train_loss)
+        #train_losses.append(train_loss)
         test_losses.append(valid_loss)
         bleus.append(bleu)
         epoch_mins, epoch_secs = epoch_time(start_time, end_time)
@@ -282,7 +282,7 @@ def run(total_epoch, best_loss):
             torch.save(model.state_dict(), 'saved/model-{0}.pt'.format(valid_loss))
 
         f = open('result/train_loss.txt', 'w')
-        f.write(str(train_losses))
+        #f.write(str(train_losses))
         f.close()
 
         f = open('result/bleu.txt', 'w')
@@ -293,8 +293,8 @@ def run(total_epoch, best_loss):
         f.write(str(test_losses))
         f.close()
 
-        print(f'Epoch: {step + 1 + train_count} | Time: {epoch_mins}m {epoch_secs}s')
-        print(f'\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}')
+        #print(f'Epoch: {step + 1 + train_count} | Time: {epoch_mins}m {epoch_secs}s')
+        #print(f'\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}')
         print(f'\tVal Loss: {valid_loss:.3f} |  Val PPL: {math.exp(valid_loss):7.3f}')
         print(f'\tBLEU Score: {bleu:.3f}')
 
