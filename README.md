@@ -414,11 +414,9 @@ I follow original paper's parameter settings. (below) <br>
 *Pruning method: L1 normalization
 
 
-1.
-python3 train.py
+1. python3 train.py
 
-2.
-python3 prune.py
+2. python3 prune.py
 
 
 ## 4. Reference
