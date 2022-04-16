@@ -411,6 +411,8 @@ I follow original paper's parameter settings. (below) <br>
 
 **Zero weight percentage with global pruning**
 ![image](https://user-images.githubusercontent.com/51250746/163510811-6b4225a0-fbb4-493b-8355-df09a6c3cb1b.png)
+*Pruning method: L1 normalization
+
 
 1.
 python3 train.py
