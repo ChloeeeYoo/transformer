@@ -406,6 +406,7 @@ I follow original paper's parameter settings. (below) <br>
 ## 3. Pruning result 
 
 **Evaluate BLEU after global pruning (no fine-tuning)**
+
 ![image](https://user-images.githubusercontent.com/51250746/163510760-97b97310-59cf-47c2-98a5-bcb145c966a0.png)
 * Pre-trained model의 Max. BLEU: 25.032
 
