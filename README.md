@@ -413,11 +413,11 @@ I follow original paper's parameter settings. (below) <br>
 ![image](https://user-images.githubusercontent.com/51250746/163510811-6b4225a0-fbb4-493b-8355-df09a6c3cb1b.png)
 *Pruning method: L1 normalization
 
+```python
+python3 train.py
 
-1. python3 train.py
-
-2. python3 prune.py
-
+python3 prune.py
+```pytyon
 
 ## 4. Reference
 - [Attention is All You Need, 2017 - Google](https://arxiv.org/abs/1706.03762)
