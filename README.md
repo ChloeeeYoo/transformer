@@ -417,7 +417,7 @@ I follow original paper's parameter settings. (below) <br>
 python3 train.py
 
 python3 prune.py
-```python
+```
 
 ## 4. Reference
 - [Attention is All You Need, 2017 - Google](https://arxiv.org/abs/1706.03762)
